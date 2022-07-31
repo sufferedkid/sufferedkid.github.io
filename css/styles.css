@@ -81,7 +81,7 @@ select {
 
 
 body{
-  margin: 20px 20px 0 20px;
+  padding: 20px 0;
   background-color: #261C2C;
   display: flex;
   flex-direction: column;
