@@ -406,6 +406,7 @@ body{
   justify-content: center;
   display: flex;
   margin-top: 10px;
+  align-self: center;
 }
 .frame__skills img{
   width: 48px;
