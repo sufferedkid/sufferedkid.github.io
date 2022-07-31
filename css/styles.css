@@ -1,0 +1,502 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---------------------- */
+
+
+body{
+  background-color: #261C2C;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  flex-direction: column;
+}
+.total{
+  display: flex;
+  flex-direction: row;
+}
+.frame {
+  width: 460px;
+  height: 352px;
+  background-color: #3E2C41;
+  background-position: center;
+  border-radius: 20px;
+  max-width: 100%;
+  max-height: 100%;
+  transition: 0.3s;
+  margin: 0 20px;
+  filter: drop-shadow(0px 11px 13px rgba(0, 0, 0, 0.2));
+}
+.frame__project {
+  width: 300px;
+  height: 352px;
+  background-color: #3E2C41;
+  background-position: center;
+  border-radius: 20px;
+  max-width: 100%;
+  max-height: 100%;
+  transition: 0.3s;
+  margin: 0 20px;
+  filter: drop-shadow(0px 11px 13px rgba(0, 0, 0, 0.2));
+}
+.frame__header{
+  width: 833px;
+  height: 56px;
+  background-color: #5C527F25;
+  border-radius: 20px 20px 0 0;
+  padding-top: 16px;
+  max-width: 100%;
+  max-height: 100%;
+}
+.project__header{
+  width: 833px;
+  height: 56px;
+  background-color: #5C527F25;
+  border-radius: 20px 20px 0 0;
+  padding-top: 16px;
+  max-width: 100%;
+  max-height: 100%;
+}
+.frame__header__2{
+  width: 833px;
+  height: 56px;
+  background-color: #5C527F25;
+  border-radius: 20px 20px 0 0;
+  padding-top: 16px;
+  max-width: 100%;
+  max-height: 100%;
+}
+.header__name{
+  width: 389px;
+  height: 24px;
+  background-color: #00000025;
+  border-radius: 10px;
+  margin-left: 19px;
+  max-width: 60%;
+  max-height: 100%;
+}
+.header__name__2{
+  width: 389px;
+  height: 24px;
+  background-color: #00000025;
+  border-radius: 10px;
+  margin-left: 19px;
+  max-width: 60%;
+  max-height: 100%;
+}
+.project__name{
+  width: 150px;
+  height: 24px;
+  background-color: #00000025;
+  border-radius: 10px;
+  margin-left: 19px;
+  max-width: 60%;
+  max-height: 100%;
+}
+.header__buttons{
+  margin-top: -24px;
+  margin-right: 18px;
+  float: right;
+  display: flex;
+}
+.project__buttons{
+  margin-top: -24px;
+  margin-right: 18px;
+  float: right;
+  display: flex;
+}
+.header__buttons__2{
+  margin-top: -24px;
+  margin-right: 18px;
+  float: right;
+  display: flex;
+}
+.header__buttons div{
+  flex: 1 1 auto;
+  width: 24px;
+  height: 24px;
+  background-color: #00000025;
+  float: left;
+  margin: 0 6.84px;
+  border-radius: 50%;
+  transition: 0.5s;
+}
+.project__buttons div{
+  flex: 1 1 auto;
+  width: 24px;
+  height: 24px;
+  background-color: #00000025;
+  float: left;
+  margin: 0 6.84px;
+  border-radius: 50%;
+  transition: 0.5s;
+}
+.header__buttons__2 div{
+  flex: 1 1 auto;
+  width: 24px;
+  height: 24px;
+  background-color: #00000025;
+  float: left;
+  margin: 0 6.84px;
+  border-radius: 50%;
+  transition: 0.5s;
+}
+.header__buttons div:hover{
+  background-color: #5C527F;
+  transition: 0.2s;
+}
+.header__buttons__2 div:hover{
+  background-color: #5C527F;
+  transition: 0.2s;
+}
+.frame__avatar{
+  display: flex;
+}
+.frame__avatar img{
+  border-radius: 100%;
+  width: 110px;
+  height: 110px;
+  margin: 60px 0 0 40px;
+}
+.project__avatar{
+  display: flex;
+  flex-direction: column;
+}
+.project__avatar img{
+  border-radius: 100%;
+  width: 110px;
+  height: 110px;
+  margin: 20px 0 0 95px;
+  margin-top: 20px;
+}
+.frame__text{
+  overflow: auto;
+  width: 461px;
+  height: 182px;
+  font-size: 20px;
+  font-family: Segoe Ui Semibold;
+  color: #fff;
+  float: left;
+  margin: 70px 0 0 25px;
+  position: relative;
+}
+.project__text{
+  overflow: auto;
+  width: 300px;
+  height: 352px;
+  font-size: 20px;
+  text-align: center;
+  font-family: Segoe Ui Semibold;
+  color: #fff;
+  float: left;
+  margin-top: 20px;
+  position: relative;
+}
+.project__text p:nth-child(2){
+  overflow: auto;
+  font-size: 16px;
+  font-family: Segoe Ui Semibold;
+  color: #fff;
+  text-align: center;
+  position: relative;
+}
+.project__text p:nth-child(3){
+  overflow: auto;
+  font-size: 16px;
+  font-family: Segoe Ui Semibold;
+  color: #fff;
+  text-align: center;
+  position: relative;
+}
+.project__text a{
+  width: 150px;
+  height: 35px;
+  background-color: #00000015;
+  border-radius: 20px;
+  border: #ffffff25 solid 2px;
+  text-align: center;
+  font-family: Segoe UI Light;
+  letter-spacing: 2px;
+  color: #ffffff25;
+  position: absolute;
+  transition: 0.3s;
+  text-decoration: none;
+  right:  70px;
+  bottom: 225px;
+}
+.frame__text p:nth-child(2){
+  overflow: auto;
+  font-size: 16px;
+  font-family: Segoe Ui Semibold;
+  color: #fff;
+  float: left;
+  position: relative;
+}
+.frame__text p:nth-child(3){
+  font-size: 16px;
+  font-family: Segoe Ui Semibold;
+  color: #fff;
+  float: left;
+  position: relative;
+}
+.frame__text p:nth-child(3):after{
+  content: " ";
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  position: absolute;
+  top: 3px;
+  left: 218px;
+  background: url("../img/cake.png");
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: 0.3s;
+}
+.frame__skills{
+  margin: -50px 0 0 45px;
+  display: flex;
+}
+.frame__skills img{
+  width: 48px;
+  height: 48px;
+  align-self: center;
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: 0.3s;
+  margin-left: 10px;
+}
+.frame__text:after{
+  content: " ";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 5px;
+  left: 110px;
+  background: url("../img/heart.png");
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: 0.3s;
+}
+.frame__2 {
+  margin-top: 20px;
+  width: 833px;
+  height: 152px;
+  background-color: #3E2C41;
+  border-radius: 20px;
+  max-width: 100%;
+  max-height: 100%;
+  transition: 0.3s;
+  filter: drop-shadow(0px 11px 13px rgba(0, 0, 0, 0.2));
+}
+.frame__buttons__2{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.frame__buttons__2 a{
+  padding-top: 2px;
+  width: 150px;
+  height: 35px;
+  background-color: #00000015;
+  margin: 0 15px;
+  border-radius: 20px;
+  border: #ffffff25 solid 2px;
+  text-align: right;
+  padding-right: 13px;
+  font-family: Segoe UI Light;
+  letter-spacing: 2px;
+  color: #ffffff25;
+  position: relative;
+  transition: 0.3s;
+  text-decoration: none;
+}
+.frame__buttons__2 a:nth-child(4){
+  padding-top: 2px;
+  width: 225px;
+  height: 35px;
+  background-color: #00000015;
+  margin: 0 15px;
+  border-radius: 20px;
+  border: #ffffff25 solid 2px;
+  text-align: right;
+  padding-right: 13px;
+  font-family: Segoe UI Light;
+  letter-spacing: 2px;
+  color: #ffffff25;
+  position: relative;
+  transition: 0.3s;
+  text-decoration: none;
+}
+.button__tg:before{
+  content: " ";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 5px;
+  left: 12px;
+  background: url("../img/tg.png");
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 50%;
+  transition: 0.3s;
+}
+.button__ds:before{
+  content: " ";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 5px;
+  left: 12px;
+  background: url("../img/ds.png");
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 50%;
+  transition: 0.3s;
+}
+.button__inst:before{
+  content: " ";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 5px;
+  left: 12px;
+  background: url("../img/inst.png");
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: invert(100%);
+  opacity: 50%;
+  transition: 0.3s;
+}
+.button__inst__2:before{
+  content: " ";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 5px;
+  left: 12px;
+  background: url("../img/inst.png");
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: invert(100%);
+  opacity: 50%;
+  transition: 0.3s;
+}
+.frame__buttons__2 a:hover{
+  background-color: #00000030;
+  border: #ffffff45 solid 2px;
+  color: #ffffff85;
+  transition: 0.3s;
+  transform: scale(1.05);
+}
+.button__tg:hover:before{
+  opacity: 100%;
+  transition: 0.3s;
+}
+.button__ds:hover:before{
+  opacity: 100%;
+  transition: 0.3s;
+}
+.button__inst:hover:before{
+  opacity: 100%;
+  transition: 0.3s;
+}
+.button__inst__2:hover:before{
+  opacity: 100%;
+  transition: 0.3s;
+}
+.frame:hover{
+  transition: 0.3s;
+  transform: scale(1.005);
+}
+.frame__2:hover{
+  transition: 0.3s;
+  transform: scale(1.005);
+}
+.frame__project:hover{
+  transition: 0.3s;
+  transform: scale(1.005);
+}
