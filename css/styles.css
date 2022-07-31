@@ -85,6 +85,7 @@ body{
   background-color: #261C2C;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 .total{
   display: flex;
