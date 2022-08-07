@@ -651,12 +651,12 @@ body{
   flex-direction: column;
 }
 .name__project p{
-  font-family: "Segoe Ui Semibold", serif;
+  font-family: 'Ubuntu', sans-serif;
   color: #ffffff60;
   font-size: 15px;
 }
 .name__project p:nth-child(1){
-  font-family: "Segoe Ui Semibold", serif;
+  font-family: 'Ubuntu', sans-serif;
   color: #ffffff60;
   font-size: 20px;
 }
