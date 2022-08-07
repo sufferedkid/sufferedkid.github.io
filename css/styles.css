@@ -112,7 +112,6 @@ body{
   filter: drop-shadow(0px 11px 13px rgba(0, 0, 0, 0.2));
 }
 .frame__project {
-  justify-self: center;
   width: 300px;
   height: 352px;
   background-color: #3E2C41;
@@ -121,24 +120,31 @@ body{
   max-width: 100%;
   max-height: 100%;
   transition: 0.3s;
+  align-items: center;
+  justify-content: center;
   filter: drop-shadow(0px 11px 13px rgba(0, 0, 0, 0.2));
 }
-@media screen and (max-width: 840px) {
+@media screen and (max-width: 824px) {
   .total{
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
   }
+  .avatar{
+    background-size: 130% !important;
+    object-fit: cover;
+  }
   .frame{
-    max-width: 95%;
+    max-width: 80%;
+    width: 833px;
   }
   .frame__project {
-    width: 300px;
+    width: 833px;
     height: 352px;
     background-color: #3E2C41;
     background-position: center;
     border-radius: 20px;
-    max-width: 100%;
+    max-width: 80%;
     max-height: 100%;
     transition: 0.3s;
     margin-top: 20px;
@@ -148,6 +154,7 @@ body{
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    display: flex;
   }
   .frame__avatar img{
     justify-content: center;
@@ -185,12 +192,21 @@ body{
     color: #fff;
     text-align: center;
     position: relative;
+
   }
   .frame__text:after{
     display: none;
   }
   .frame__text p:last-child:after{
     display: none !important;
+  }
+  .frame__buttons__2{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .frame__buttons__2 a{
+    margin: 12px !important;
   }
 }
 .frame__header{
@@ -230,7 +246,7 @@ body{
   max-height: 100%;
   font-family: 'Ubuntu', sans-serif;
   padding-left: 10px;
-  color: #ffffff25;
+  color: #ffffff70;
 }
 .header__name__2{
   width: 389px;
@@ -242,7 +258,7 @@ body{
   max-height: 100%;
   font-family: 'Ubuntu', sans-serif;
   padding-left: 10px;
-  color: #ffffff25;
+  color: #ffffff70;
 }
 .project__name{
   width: 150px;
@@ -250,11 +266,11 @@ body{
   background-color: #00000025;
   border-radius: 10px;
   margin-left: 19px;
-  max-width: 60%;
+  max-width: 40%;
   max-height: 100%;
   font-family: 'Ubuntu', sans-serif;
   padding-left: 10px;
-  color: #ffffff25;
+  color: #ffffff70;
 }
 .header__buttons{
   margin-top: -24px;
@@ -329,12 +345,14 @@ body{
 .project__avatar{
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .project__avatar img{
   border-radius: 100%;
   width: 110px;
   height: 110px;
-  margin: 20px 0 0 95px;
+  margin: 20px 0 0 0;
 }
 .frame__text{
   overflow: hidden;
@@ -607,6 +625,7 @@ body{
   width: 300px;
   height: 70px;
   margin: 30px 10px 0 10px;
+  max-width: 80%;
 }
 .avatar{
   width: 70px;
@@ -634,6 +653,7 @@ body{
 .name__project p{
   font-family: "Segoe Ui Semibold", serif;
   color: #ffffff60;
+  font-size: 15px;
 }
 .name__project p:nth-child(1){
   font-family: "Segoe Ui Semibold", serif;
